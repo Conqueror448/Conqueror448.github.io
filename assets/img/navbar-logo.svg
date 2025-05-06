@@ -8,13 +8,15 @@
       }
 
       .st1 {
-        fill: #dee21d;
-        font-family: InformalRoman-Regular, 'Informal Roman';
-        font-size: 48px;
+        fill: #e0ffff;
+        font-family: HarlowSolid, 'Harlow Solid Italic';
+        font-size: 32px;
       }
     </style>
   </defs>
   <g class="st0">
-    <text class="st1" transform="translate(23 30.11)"><tspan x="0" y="0">Byteworks</tspan></text>
+    <g class="st0">
+      <text class="st1" transform="translate(40.33 25.67)"><tspan x="0" y="0">Byteworks</tspan></text>
+    </g>
   </g>
 </svg>
