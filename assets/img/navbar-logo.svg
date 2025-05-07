@@ -17,7 +17,9 @@
   <g class="st0">
     <g class="st0">
       <g class="st0">
-        <text class="st1" transform="translate(40.33 25.67)"><tspan x="0" y="0">Byteworks</tspan></text>
+        <g class="st0">
+          <text class="st1" transform="translate(40.33 25.67)"><tspan x="0" y="0">Byteworks</tspan></text>
+        </g>
       </g>
     </g>
   </g>
