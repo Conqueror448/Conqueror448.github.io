@@ -9,8 +9,9 @@
 
       .st1 {
         fill: #e0ffff;
-        font-family: HarlowSolid, 'Harlow Solid Italic';
+        font-family: Georgia-Italic, Georgia;
         font-size: 32px;
+        font-style: italic;
       }
     </style>
   </defs>
@@ -18,7 +19,9 @@
     <g class="st0">
       <g class="st0">
         <g class="st0">
-          <text class="st1" transform="translate(40.33 25.67)"><tspan x="0" y="0">Byteworks</tspan></text>
+          <g class="st0">
+            <text class="st1" transform="translate(40.33 25.67)"><tspan x="0" y="0">Byteworks</tspan></text>
+          </g>
         </g>
       </g>
     </g>
