@@ -309,33 +309,34 @@
             </div>
 
         <form id="contact-form">
-        <div class="row">
-            <!-- Row 1: Name + Email -->
-            <div class="col-md-6 mb-3">
-            <input class="form-control" name="name" type="text" placeholder="Your Name *" required />
-            </div>
-            <div class="col-md-6 mb-3">
-            <input class="form-control" name="email" type="email" placeholder="Your Email *" required />
+            <div class="row">
+                <!-- Name and Email -->
+                <div class="col-md-6 mb-3">
+                <input class="form-control" name="name" type="text" placeholder="Your Name *" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                <input class="form-control" name="email" type="email" placeholder="Your Email *" required />
+                </div>
+
+                <!-- Phone and empty column to balance -->
+                <div class="col-md-6 mb-3">
+                <input class="form-control" name="phone" type="tel" placeholder="Your Phone" />
+                </div>
+                <div class="col-md-6 mb-3"><!-- empty for symmetry --></div>
+
+                <!-- Message full width -->
+                <div class="col-12 mb-4">
+                <textarea class="form-control" name="message" rows="5" placeholder="Your Message *" required></textarea>
+                </div>
             </div>
 
-            <!-- Row 2: Phone (spans half) + empty space to balance -->
-            <div class="col-md-6 mb-3">
-            <input class="form-control" name="phone" type="tel" placeholder="Your Phone" />
+            <div class="text-center mt-3">
+                <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">
+                📅 Book a 20-Minute Strategy Call
+                </button>
             </div>
-            <div class="col-md-6 mb-3"></div>
-
-            <!-- Row 3: Message full width -->
-            <div class="col-12 mb-4">
-            <textarea class="form-control" name="message" rows="5" placeholder="Your Message *" required></textarea>
-            </div>
-        </div>
-
-        <div class="text-center mt-3">
-            <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">
-            📅 Book a 20-Minute Strategy Call
-            </button>
-        </div>
         </form>
+
 
         </div>
         </section>
