@@ -523,7 +523,7 @@
 
             emailjs.sendForm('service_sdc99dw', 'template_804zxlb', this)
             .then(function() {
-                alert('Message sent successfully!');
+                window.location.href = 'https://calendly.com/eric-w-hoft';
             }, function(error) {
                 alert('Failed to send message: ' + JSON.stringify(error));
             });
