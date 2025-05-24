@@ -344,37 +344,33 @@
 
         <form id="contact-form">
             <div class="row">
-                <!-- Name and Email -->
-                <div class="col-md-6 mb-3">
-                <input class="form-control" name="name" type="text" placeholder="Your Name *" required />
+                <!-- Row 1 -->
+                <div class="col-12 mb-3">
+                    <input class="form-control" name="name" type="text" placeholder="Your Name *" required />
                 </div>
-                <div class="col-md-6 mb-3">
-                <input class="form-control" name="email" type="email" placeholder="Your Email *" required />
+                <!-- Row 2 -->
+                <div class="col-12 mb-3">
+                    <input class="form-control" name="email" type="email" placeholder="Your Email *" required />
                 </div>
-
-                <!-- Phone and empty column to balance -->
-                <div class="col-md-6 mb-3">
-                <input class="form-control" name="phone" type="tel" placeholder="Your Phone" />
-                </div>
-                <div class="col-md-6 mb-3"><!-- empty for symmetry --></div>
-
-                <!-- Message full width -->
-                <div class="col-12 mb-4">
-                <textarea class="form-control" name="message" rows="5" placeholder="Your Message *" required></textarea>
+                <!-- Row 3 -->
+                <div class="col-12 mb-3">
+                    <input class="form-control" name="phone" type="tel" placeholder="Your Phone" />
                 </div>
             </div>
 
             <!-- Loading text -->
             <div class="text-center mb-2">
-                <p id="loading-text" style="display: none; color: white; font-size: 2.0 rem; font-weight: bold;">Loading Calendly page, please wait...</p>
+                <p id="loading-text" style="display: none; color: white; font-size: 2.0rem; font-weight: bold;">Loading Calendly page, please wait...</p>
             </div>
 
+            <!-- Button -->
             <div class="text-center mt-3">
                 <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">
-                📅 Book a free 30-Minute Strategy Call
+                    📅 Book a free 30-Minute Strategy Call
                 </button>
             </div>
         </form>
+
 
 
         </div>
@@ -556,10 +552,9 @@
 
                 const name = this.querySelector('[name="name"]').value.trim();
                 const email = this.querySelector('[name="email"]').value.trim();
-                const message = this.querySelector('[name="message"]').value.trim();
 
-                if (!name || !email || !message) {
-                    alert('❌ Please fill out all required fields.');
+                if (!name || !email) {
+                    alert('❌ Please fill out both your name and email.');
                     return;
                 }
 
@@ -567,12 +562,14 @@
                 const loadingText = document.getElementById('loading-text');
                 loadingText.style.display = 'block';
 
-                // Redirect after a short delay
+                // Redirect after short delay
                 setTimeout(() => {
                     window.location.href = 'https://calendly.com/eric-w-hoft';
                 }, 500);
             });
         </script>
+
+
 
 
 
