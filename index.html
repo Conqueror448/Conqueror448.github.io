@@ -343,20 +343,6 @@
             </div>
 
         <form id="contact-form">
-            <div class="row">
-                <!-- Row 1 -->
-                <div class="col-12 mb-3">
-                    <input class="form-control" name="name" type="text" placeholder="Your Name *" required />
-                </div>
-                <!-- Row 2 -->
-                <div class="col-12 mb-3">
-                    <input class="form-control" name="email" type="email" placeholder="Your Email *" required />
-                </div>
-                <!-- Row 3 -->
-                <div class="col-12 mb-3">
-                    <input class="form-control" name="phone" type="tel" placeholder="Your Phone" />
-                </div>
-            </div>
 
             <!-- Loading text -->
             <div class="text-center mb-2">
@@ -369,7 +355,7 @@
                     📅 Book a free 30-Minute Strategy Call
                 </button>
                 <small style="display: block; margin-top: 10px; color: #ccc; font-style: italic;">
-                    You'll be able to share more context about your needs on the next page.
+                    You'll share your contact information and more context about your needs on the next page.
                 </small>
             </div>
         </form>
@@ -552,15 +538,7 @@
         <script>
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-
-                const name = this.querySelector('[name="name"]').value.trim();
-                const email = this.querySelector('[name="email"]').value.trim();
-
-                if (!name || !email) {
-                    alert('❌ Please fill out both your name and email.');
-                    return;
-                }
-
+                
                 // Show loading message
                 const loadingText = document.getElementById('loading-text');
                 loadingText.style.display = 'block';
