@@ -364,9 +364,14 @@
                 </div>
             </div>
 
+            <!-- Loading text -->
+            <div class="text-center mb-2">
+                <p id="loading-text" style="display: none; color: white; font-size: 2.0 rem; font-weight: bold;">Loading Calendly page, please wait...</p>
+            </div>
+
             <div class="text-center mt-3">
                 <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">
-                📅 Book a 20-Minute Strategy Call
+                📅 Book a free 30-Minute Strategy Call
                 </button>
             </div>
         </form>
@@ -544,31 +549,31 @@
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+                <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
 
-            const name = this.querySelector('[name="name"]').value.trim();
-            const email = this.querySelector('[name="email"]').value.trim();
-            const message = this.querySelector('[name="message"]').value.trim();
+                const name = this.querySelector('[name="name"]').value.trim();
+                const email = this.querySelector('[name="email"]').value.trim();
+                const message = this.querySelector('[name="message"]').value.trim();
 
-            if (!name || !email || !message) {
-                alert('❌ Please fill out all required fields.');
-                return;
-            }
+                if (!name || !email || !message) {
+                    alert('❌ Please fill out all required fields.');
+                    return;
+                }
 
-            // Optional loading feedback
-            const button = document.getElementById('submitButton');
-            button.disabled = true;
-            button.textContent = 'Loading...';
+                // Show loading message
+                const loadingText = document.getElementById('loading-text');
+                loadingText.style.display = 'block';
 
-            // Redirect to Calendly
-            setTimeout(() => {
-                window.location.href = 'https://calendly.com/eric-w-hoft';
-            }, 500); // small delay to let users register the click
-        });
+                // Redirect after a short delay
+                setTimeout(() => {
+                    window.location.href = 'https://calendly.com/eric-w-hoft';
+                }, 500);
+            });
         </script>
+
 
 
     </body>
@@ -593,4 +598,3 @@
     </div>
   </div>
 </div>
-
