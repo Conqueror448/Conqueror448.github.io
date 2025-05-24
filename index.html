@@ -364,6 +364,11 @@
                 </div>
             </div>
 
+            <!-- Loading text -->
+            <div class="text-center mb-2">
+                <p id="loading-text" style="display: none; color: white;">Loading...</p>
+            </div>
+            
             <div class="text-center mt-3">
                 <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">
                 📅 Book a 20-Minute Strategy Call
@@ -555,11 +560,15 @@
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
+            // Show the loading message
+            document.getElementById('loading-text').style.display = 'block';
+            
             emailjs.sendForm('service_sdc99dw', 'template_804zxlb', this)
             .then(function() {
                 window.location.href = 'https://calendly.com/eric-w-hoft';
             }, function(error) {
                 alert('Failed to send message: ' + JSON.stringify(error));
+                document.getElementById('loading-text').style.display = 'none';
             });
         });
         </script>
