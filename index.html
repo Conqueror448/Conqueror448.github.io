@@ -511,24 +511,31 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-         <!-- EmailJS integration -->
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script>
-        (function() {
-            emailjs.init("3fe4MAQi_ZP9sfmBD");
-        })();
-
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            emailjs.sendForm('service_sdc99dw', 'template_804zxlb', this)
-            .then(function() {
-                alert('Message sent successfully!');
-            }, function(error) {
-                alert('Failed to send message: ' + JSON.stringify(error));
-            });
+            const name = this.querySelector('[name="name"]').value.trim();
+            const email = this.querySelector('[name="email"]').value.trim();
+            const message = this.querySelector('[name="message"]').value.trim();
+
+            if (!name || !email || !message) {
+                alert('❌ Please fill out all required fields.');
+                return;
+            }
+
+            // Optional loading feedback
+            const button = document.getElementById('submitButton');
+            button.disabled = true;
+            button.textContent = 'Loading...';
+
+            // Redirect to Calendly
+            setTimeout(() => {
+                window.location.href = 'https://calendly.com/eric-w-hoft';
+            }, 500); // small delay to let users register the click
         });
         </script>
+
 
     </body>
 </html>
