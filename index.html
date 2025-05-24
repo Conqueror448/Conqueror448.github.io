@@ -552,26 +552,27 @@
          <!-- EmailJS integration -->
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script>
-        (function() {
-            emailjs.init("3fe4MAQi_ZP9sfmBD");
-        })();
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
 
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+                // Show the loading message
+                document.getElementById('loading-text').style.display = 'block';
 
-            // Show the loading message
-            document.getElementById('loading-text').style.display = 'block';
-            
-            emailjs.sendForm('service_sdc99dw', 'template_804zxlb', this)
-            .then(function() {
+                // Validate required fields
+                const name = this.querySelector('[name="name"]').value.trim();
+                const email = this.querySelector('[name="email"]').value.trim();
+                const message = this.querySelector('[name="message"]').value.trim();
+
+                if (!name || !email || !message) {
+                    alert('Please fill out all required fields (Name, Email, and Message).');
+                    document.getElementById('loading-text').style.display = 'none';
+                    return;
+                }
+
+                // If validation passes, redirect to Calendly
                 window.location.href = 'https://calendly.com/eric-w-hoft';
-            }, function(error) {
-                alert('Failed to send message: ' + JSON.stringify(error));
-                document.getElementById('loading-text').style.display = 'none';
             });
-        });
         </script>
-
     </body>
 </html>
 
