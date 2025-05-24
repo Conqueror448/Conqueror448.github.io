@@ -552,27 +552,45 @@
          <!-- EmailJS integration -->
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script>
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('loading-text').style.display = 'block';
 
-                // Show the loading message
-                document.getElementById('loading-text').style.display = 'block';
+            const data = {
+                name: this.querySelector('[name="name"]').value.trim(),
+                email: this.querySelector('[name="email"]').value.trim(),
+                phone: this.querySelector('[name="phone"]').value.trim(),
+                message: this.querySelector('[name="message"]').value.trim()
+            };
 
-                // Validate required fields
-                const name = this.querySelector('[name="name"]').value.trim();
-                const email = this.querySelector('[name="email"]').value.trim();
-                const message = this.querySelector('[name="message"]').value.trim();
+            if (!data.name || !data.email || !data.message) {
+                alert('Please fill out all required fields.');
+                document.getElementById('loading-text').style.display = 'none';
+                return;
+            }
 
-                if (!name || !email || !message) {
-                    alert('Please fill out all required fields (Name, Email, and Message).');
-                    document.getElementById('loading-text').style.display = 'none';
-                    return;
+            fetch('https://script.google.com/macros/s/AKfycbwu3gmJsA-SO4B8erfGA_VVngYJGnqRTd5TG74ndeLHxATWzs90CsDwBUVVmjBiLpMmNQ/exec', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
                 }
-
-                // If validation passes, redirect to Calendly
-                window.location.href = 'https://calendly.com/eric-w-hoft';
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = 'https://calendly.com/eric-w-hoft';
+                } else {
+                    alert('Submission failed.');
+                    document.getElementById('loading-text').style.display = 'none';
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+                document.getElementById('loading-text').style.display = 'none';
             });
+        });
         </script>
+
     </body>
 </html>
 
@@ -595,4 +613,3 @@
     </div>
   </div>
 </div>
-
