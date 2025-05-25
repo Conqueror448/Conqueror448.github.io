@@ -11348,3 +11348,12 @@ section#contact form#contactForm :-ms-input-placeholder {
     position: relative;
     z-index: 2;
 }
+
+
+
+
+/*I am going to make it transparent for the navbar to make it look better*/
+.navbar-scrolled {
+  background: transparent !important;
+  box-shadow: none !important;
+}
