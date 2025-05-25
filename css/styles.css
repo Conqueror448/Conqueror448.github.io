@@ -11395,3 +11395,9 @@ section#contact form#contactForm :-ms-input-placeholder {
     display: flex;
     gap: 15px;
 }
+
+@media (max-width: 991px) {
+    .social-icons {
+        display: none;
+    }
+}
