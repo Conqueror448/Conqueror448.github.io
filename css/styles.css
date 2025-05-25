@@ -11357,3 +11357,25 @@ section#contact form#contactForm :-ms-input-placeholder {
   background: transparent !important;
   box-shadow: none !important;
 }
+
+
+
+/* Adding social icons to be displayed */
+.social-icons {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #facc15; /* or any hover color you like */
+}
