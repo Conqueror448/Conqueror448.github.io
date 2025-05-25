@@ -11362,20 +11362,22 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /* Adding social icons to be displayed */
 .social-icons {
-    position: fixed;
-    top: 15px;
+    position: absolute;
+    top: 10px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1050;
+    display: flex;
+    gap: 15px;
 }
 
 .social-icons a {
     color: white;
-    margin-left: 15px;
     font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #facc15; /* or any hover color you like */
+    color: #facc15;
 }
+
