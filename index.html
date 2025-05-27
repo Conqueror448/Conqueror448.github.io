@@ -608,6 +608,16 @@
             });
         </script>
 
+        <script>
+        // Toggle nav-open class on body for background behavior
+        $('#navbarResponsive').on('shown.bs.collapse', function () {
+            $('body').addClass('nav-open');
+        });
+
+        $('#navbarResponsive').on('hidden.bs.collapse', function () {
+            $('body').removeClass('nav-open');
+        });
+        </script>
 
 
 
