@@ -11515,3 +11515,8 @@ section#contact form#contactForm :-ms-input-placeholder {
     overflow: hidden;
   }
 }
+
+#mainNav {
+  background-color: #000 !important;
+  border-bottom: none !important;
+}
