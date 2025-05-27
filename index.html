@@ -421,13 +421,19 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Hoft Works LLC</div>
-                    <div class="col-lg-4 text-lg-end">
+                    <div class="col-lg-6 text-lg-start">
+                        &copy; <span id="year"></span> Hoft Works LLC
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="#" data-toggle="modal" data-target="#privacyModal">Privacy Policy</a>
                     </div>
                 </div>
             </div>
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
         </footer>
+
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
