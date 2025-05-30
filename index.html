@@ -228,7 +228,7 @@
                         &copy; <span id="year"></span> Hoft Works LLC
                     </div>
                     <div class="col-lg-6 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#" data-toggle="modal" data-target="#privacyModal">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none me-3" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
                     </div>
                 </div>
             </div>
@@ -236,6 +236,7 @@
                 document.getElementById('year').textContent = new Date().getFullYear();
             </script>
         </footer>
+
 
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
@@ -441,40 +442,27 @@
                 });
         </script>
 
+        
+        <!-- Privacy Policy Modal -->
+        <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This is where your full privacy policy text goes.</p>
+                <p>You can also include lists, links, and formatting here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
 
 
     </body>
 </html>
-
-<!-- Privacy Policy Modal -->
-<div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-        <div class="modal-body">
-            <p>We value your privacy.</p>
-            <p>
-                When you book a call through our website, your information is collected and managed via <strong>Calendly</strong>, a third-party scheduling service. We do not store or process this information on our servers.
-            </p>
-            <p>
-                We do not sell, rent, or share your personal information with third parties for marketing purposes. Your data is used solely to respond to your inquiry and provide relevant services.
-            </p>
-            <p>
-                This site is securely hosted via <strong>GitHub Pages</strong> with enforced HTTPS encryption to protect your connection.
-            </p>
-            <p>
-                If you wish to have your data deleted after our communication, please contact us directly.
-            </p>
-            <p>
-                This policy applies only to this website and does not cover external services such as Calendly or other third-party links.
-            </p>
-        </div>
-
-    </div>
-  </div>
-</div>
