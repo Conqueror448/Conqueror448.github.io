@@ -118,8 +118,13 @@
         <div class="container">
             <div class="row align-items-center">
             <div class="col-lg-4 text-center">
-                <img src="assets/img/headshot/headshot.jpg" alt="Eric Hoft Headshot" class="img-fluid rounded-circle mb-4" style="max-width: 250px;" />
+                <picture>
+                    <source srcset="assets/img/headshot/headshot.avif" type="image/avif">
+                    <source srcset="assets/img/headshot/headshot.webp" type="image/webp">
+                    <img src="assets/img/headshot/headshot.jpg" alt="Eric Hoft Headshot" class="img-fluid rounded-circle mb-4" style="max-width: 250px;" loading="lazy">
+                </picture>
             </div>
+
             <div class="col-lg-8">
                 <h2 class="section-heading text-uppercase">Meet Eric — Engineer-Turned-Problem-Solver</h2>
                 <p class="text-muted">
