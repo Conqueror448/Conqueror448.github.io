@@ -1,4 +1,69 @@
-User-agent: *
+# --- GOOGLE BOTS ---
+User-agent: Googlebot
 Disallow:
 
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: Googlebot-News
+Disallow:
+
+User-agent: Googlebot-Video
+Disallow:
+
+User-agent: Googlebot-Mobile
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: AdsBot-Google-Mobile
+Disallow:
+
+User-agent: Mediapartners-Google
+Disallow:
+
+User-agent: Chrome-Lighthouse
+Disallow:
+
+# --- OTHER SEARCH ENGINES ---
+User-agent: Bingbot
+Disallow:
+
+User-agent: Slurp
+Disallow:
+
+User-agent: DuckDuckBot
+Disallow:
+
+User-agent: Baiduspider
+Disallow:
+
+User-agent: Yandex
+Disallow:
+
+# --- SEO TOOLS ---
+User-agent: AhrefsBot
+Disallow:
+
+User-agent: SemrushBot
+Disallow:
+
+User-agent: MJ12bot
+Disallow:
+
+User-agent: SEOkicks-Robot
+Disallow:
+
+User-agent: SEOptimerBot
+Disallow:
+
+User-agent: Screaming Frog SEO Spider
+Disallow:
+
+# --- BLOCK EVERYONE ELSE ---
+User-agent: *
+Disallow: /
+
+# --- SITEMAP LOCATION ---
 Sitemap: https://hoftworks.com/sitemap.xml
